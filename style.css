@@ -1,0 +1,230 @@
+/*-----common styles-----*/
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family:'Poppins', sans-serif;
+}
+
+/*-----navigation menu-----*/
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 70px;
+}
+nav h3{
+    font-size: 32px;
+    margin: 12px;
+    margin-top: 25px;
+}
+nav .nav-items li{
+    display: inline-block;
+    list-style: none;
+    padding: 13px;
+    font-size: 18px;
+}
+nav .nav-items li a{
+    text-decoration: none;
+    color: black;
+}
+.nav-items li a:hover{
+    color: rgba(61, 61, 61, 0.884);
+}
+
+/*-----header section-----*/
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding:0px 20px;
+}
+.header{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
+    min-height: 500px;
+}
+.header-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.header-text h1{
+    font-size: 53px;
+    font-weight: 900px;
+}
+.header-text p{
+    width: 610px;
+    font-size: 16px;
+    text-align: left;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.header-text button{
+    border: none;
+    border-radius: 80px;
+    padding: 8px;
+    width: 200px;
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+    margin-top: 30px;
+    background-color: #6753e2;
+}
+.header-text button .fa-arrow-right{
+    padding: 5px;
+}
+.header-image{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    
+}
+.header-image img{
+    width: 100%;
+    transition-duration: 1s;
+    transition-property: transform;
+    transition-timing-function: ease-in-out;
+}
+.header-image img:hover{
+    transform: rotate(360deg) scale(1.2) translate(50px);
+}
+
+/*-----company logos section-----*/
+
+.company-logos{
+    text-align: center;
+    margin-top: 60px;
+}
+
+.company-logos img{
+    padding: 22px;
+    margin-left: 29px;
+}
+
+/*-----popular products section----*/
+.gear-collections{
+    margin-top: 100px;
+}
+.gear-collections h3{
+    text-align: center;
+    margin-bottom: 60px;
+    font-size: 30px;
+}
+.all-gears{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 15px;
+    grid-row-gap: 35px;
+    margin-left: 5%;
+}
+.gear{
+    box-shadow: 5px 5px 5px 4px rgb(122, 122, 122);
+    border-radius: 10px;
+    width: fit-content;
+    margin: 20px;
+    padding: 20px;
+    text-align: left;
+}
+.gear img{
+    border-radius: 8px;
+}
+.gear-info h4{
+    font-size: 25px;
+}
+.gear-info .price{
+    font-size: 22px;
+    font-weight: lighter;
+}
+.gear-info .rating .fa-star{
+    color: goldenrod;
+}
+.gear-info .details p{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.gear-collections button{
+    margin-top: 30px;
+    border: none;
+    background-color: white;
+    color: #6753e2;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 22px;
+}
+.gear-collections .fa-arrow-right{
+    color: #6753e2;
+    padding: 10px;
+}
+/*-----Bonus Section-----*/
+.influencers-gears{
+    margin-top: 100px;
+}
+.influencers-gears h3{
+    text-align: center;
+    font-size: 30px;
+    margin: 25px;
+}
+.vloggers{
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+.vlogger{
+    width: 250px;
+    height: 250px;
+    padding: 5px;
+    border: 0.2px solid rgba(58, 58, 58, 0.425);
+    border-radius: 5px;
+    margin: 10px;
+}
+.vlogger:hover{
+    box-shadow: 3px 3px 3px 3px grey;
+}
+.vlogger img{
+    width: 190px;
+    height: 190px;
+    border-radius: 6px;
+}
+.vlogger p{
+    text-align: center;
+    font-size: 20px;
+}
+.vlogger a{
+    margin-left: 20%;
+    font-size: 15px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+.vlogger a:hover{
+    text-decoration: underline;
+    color: rgb(150, 150, 150);
+}
+
+/*-----footer section-----*/
+
+footer{
+    margin-top: 100px;
+    background-color: #0A0826;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+@media only screen and (max-width: 688px){
+    .nav-items{
+        display:none;
+    }
+    .header{
+        grid-template-columns: 1fr;
+        height: fit-content;
+    }
+    .header-text{
+        order: 2;
+    }
+    .all-gears{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+}
